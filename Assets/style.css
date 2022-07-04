@@ -75,3 +75,7 @@ textarea {
   border-style: dashed;
   border-width: 10px;
 }
+
+.input {
+  background-color: #77dd77;
+}
