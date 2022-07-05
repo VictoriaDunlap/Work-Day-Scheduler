@@ -4,12 +4,18 @@ var inputValues = $('.input')
 var saveButton = $('.button')
 
 
-// adds date and time to the page 
+// adds date and time to the page // while loop
 var timeUpdate = () => {
     $("#currentDay").text(todayDateAndTime);
 }
-setInterval(timeUpdate, 1000);
+setInterval(timeUpdate, 1000); // while loop
 
+// function setColorBasedOnTime () {
+//     var now = Date()
+//     if (now = todayDateAndTime) {
+        
+//     }
+// }
 
 // makes block red when it is within the current hour 
 function colorChange () {
@@ -41,10 +47,11 @@ function colorChange () {
     // if (now >= 1 || now < 11) {
     //     document.body.style.backgroundColor = "red"
     // }
-    return (colorChange)
 }
 
-// changes color to grey when it is past that time 
+colorChange()
+
+// changes color to grey when it is past that time // et color as function -- colors that way 
 function colorChangeForPastTime () {
     var now = Date().getHours();
     if (now >= 9) {
@@ -74,14 +81,15 @@ function colorChangeForPastTime () {
      if (now >= 17) {
         document.getElementById(nineAm).style.backgroundColor = "grey"
      }
-    return (colorChangeForPastTime)
 }
+
+colorChangeForPastTime()
 
 // has the document save the input when the button is clicked once 
 var eventOnSchedule = () => {
     saveButton.onclick.addEventListener('click', addEvent);
     localStorage.getItem(inputValues)
-    console.log('am i crazy?')
+   
 }
 
 // add the event to the page 
